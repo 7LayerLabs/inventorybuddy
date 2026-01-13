@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    
+    <!-- PWA Primary Tags -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="Bobola Prep">
+    <meta name="theme-color" content="#0f172a">
+    <link rel="manifest" href="manifest.json">
+    
+    <!-- Site Icon & iOS Home Screen Icon -->
+    <link rel="icon" type="image/png" href="https://img.freepik.com/premium-vector/chef-logo-design-template_564344-32.jpg?w=2000">
+    <link rel="apple-touch-icon" href="https://img.freepik.com/premium-vector/chef-logo-design-template_564344-32.jpg?w=2000">
+    
+    <title>Bobola Prep</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .modal-open { overflow: hidden; }
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+        .scrollbar-hide::-webkit-scrollbar { display: none; }
+        .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+        
+        body {
+            -webkit-tap-highlight-color: transparent;
+            user-select: none;
+            background-color: #f8fafc;
+        }
+
+        /* Adjustments for iOS safe areas in standalone mode */
+        @supports (padding: env(safe-area-inset-top)) {
+            header {
+                padding-top: calc(1rem + env(safe-area-inset-top));
+            }
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="font-sans selection:bg-blue-100 antialiased">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
